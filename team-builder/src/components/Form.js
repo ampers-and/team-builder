@@ -5,7 +5,9 @@ const Form = props => {
     const [teamMember, setTeamMember] = useState({name:'', email:'', role:''});
     
     const changeHandler = event => {
-        setTeamMember(event.target.value);
+
+        console.log(event.target.value);
+        setTeamMember({ ...teamMember, [event.target.name]: event.target.value});
     };
 
     const submitForm = event => {

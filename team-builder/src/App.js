@@ -6,10 +6,10 @@ import Form from './components/Form';
 
 function App() {
 
-  const [teamMemebers, setTeamMemmbers] = useState({name:'Harry Potter', email:'hedwig@hogwarts.edu', role:'Auror'});
+  const [teamMembers, setTeamMembers] = useState([{id: 1, name:'Harry Potter', email:'hedwig@hogwarts.edu', role:'Auror'}]);
   
-  const addNewTeamMember = teamMember =>{
-    setTeamMemmbers([...teamMemebers, teamMember]);
+  const addNewTeamMember = teamMember => {
+    setTeamMembers([...teamMembers, teamMember]);
   };
 
   return (
@@ -18,7 +18,7 @@ function App() {
         Team Builder
       </header>
       <Form addNewTeamMember={addNewTeamMember} />
-      <TeamMembersList/>
+      <TeamMembersList teamMembersList={teamMembers}/>
     </div>
   );
 }

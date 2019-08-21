@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TeamMembersList = props => {
+const TeamMembersList = (props) => {
     console.log(props);
 
     return(
