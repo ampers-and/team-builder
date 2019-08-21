@@ -1,12 +1,19 @@
-import React, {useState, useEffect } from 'react'
+import React, {useState, useEffect } from 'react';
+import TeamMember from './TeamMember';
 
-const TeamMembersList = (props) =>{
+const TeamMembersList = () =>{
 
     const [tMList, setTMList] = useState([]);
 
     return(
-        <div>
-            
+        <div className="tm-list">
+            {tMList.map(a => (
+                <TeamMember
+                    name={a.name}
+                    email={a.email}
+                    role={a.role}
+                />
+            ))}
         </div>
     )
 }
