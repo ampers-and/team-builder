@@ -18,7 +18,7 @@ function App() {
         Team Builder
       </header>
       <Form addNewTeamMember={addNewTeamMember} />
-      <TeamMembersList TeamMembersList={teamMemebers} />
+      <TeamMembersList/>
     </div>
   );
 }
